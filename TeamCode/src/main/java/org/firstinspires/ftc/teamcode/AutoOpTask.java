@@ -83,8 +83,11 @@ public class AutoOpTask extends LinearOpMode {
             leftLinearControl.control(mmToTicks(100));
             rightLinearControl.control(mmToTicks(100));
 
-            leftHookServo.setPosition(-1);
-            rightHookServo.setPosition(1);
+            leftMotor.setPower(1);
+            rightMotor.setPower(1);
+            sleep(3000);
+            leftMotor.setPower(0);
+            rightMotor.setPower(0);
 
             leftLinearControl.control(mmToTicks(-100));
             rightLinearControl.control(mmToTicks(-100));
